@@ -25,7 +25,19 @@
       }
     </style>
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-    <script src="index.js?1726568544278"></script>
+    <script src="index.js?1726653216893"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        var preloadDiv = document.getElementById("_preload_div_");
+        if (preloadDiv) {
+          var preloaderImg = preloadDiv.querySelector("img");
+          if (preloaderImg && preloaderImg.src.includes("_preloader.gif")) {
+            // Update the src to the new file path
+            preloaderImg.src = "./preloader.gif";
+          }
+        }
+      });
+    </script>
     <script>
       // Global Scripts
       var meta = document.createElement("meta");
@@ -33,7 +45,7 @@
       meta.content =
         "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
       // Append the meta tag to the document head
-      //document.getElementsByTagName("head")[0].appendChild(meta);
+      document.getElementsByTagName("head")[0].appendChild(meta);
       var styleLink = document.createElement("link");
       styleLink.rel = "stylesheet";
       styleLink.href = "./style.css";
@@ -398,7 +410,7 @@
       <span
         style="display: inline-block; height: 100%; vertical-align: middle"
       ></span>
-      <img src=images/_preloader.gif?1726568544279 style='vertical-align:
+      <img src=images/_preloader.gif?1726653216894 style='vertical-align:
       middle; max-height: 100%'/>
     </div>
   </body>
